@@ -4,6 +4,11 @@ import Foundation
 import Combine
 import UIKit
 
+/*
+ 클래스의 프로퍼티를 Publisher로 설정
+ 특정 인스턴스의 프로퍼티와 subscription 관계 형성
+ */
+
 final class SomeViewModel {
   @Published var name: String = "Jack" //Publisher 설정
   var age: Int = 20

@@ -18,8 +18,9 @@ subject.send("Hello")
 subject.send("Hello again!")
 subject.send("Hello for the last time")
 
-subject.send(completion: .finished) //Subject가 구독 관계 끊음
-//subscription1.cancel() //Subscription 자체로 구독관계 끊음
+//구독 해제 방법 2가지
+subject.send(completion: .finished) //1. Subject가 구독 관계 끊음
+//subscription1.cancel() //2. Subscription 자체로 구독관계 끊음
 subject.send("Hello ?? :(")
 
 

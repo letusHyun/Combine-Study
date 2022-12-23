@@ -1,5 +1,10 @@
 import UIKit
 import Combine
+/*
+ Subject
+ send메소드를 통해 subscriber에게 data 전송
+ */
+
 
 //PassthroughSubject
 let relay = PassthroughSubject<String, Never>() //<Output, Error>

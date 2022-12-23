@@ -7,11 +7,13 @@ let just = Just(1000) //Publisher
 let subscription1 = just.sink { value in //sink: Subscriber
   print("Received Value: \(value)")
 }
+
 print("-------------------------")
 let arrayPublisher = [1,3,5,7,9].publisher
 let subscription2 = arrayPublisher.sink { value in //sink: Subscriber
   print("Received Value: \(value)")
 }
+
 print("-------------------------")
 class MyClass {
   var property: Int = 0 {
@@ -23,7 +25,7 @@ class MyClass {
 
 let object = MyClass()
 let subscription3 = arrayPublisher.assign(to: \.property, on: object)
-print("Final Value: \(object.property)")
+print("Final Value: \(object.property)")S
 object.property = 3
 //: [Next](@next)
 
